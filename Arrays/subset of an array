@@ -1,0 +1,26 @@
+// This is the code for the getting the all posible sub string from the given an array.
+
+import java.util.Scanner;
+
+public class subarray {
+    public static void main(String args[]){
+        System.out.println("Enter the size of the array ");
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int arr[] = new int[n];
+        System.out.println("Enter the elements");
+        for (int k=0; k < n; k++) {
+            arr[k] = s.nextInt();
+        }  
+        for(int i =0;i < arr.length ; i++){
+            for(int j =i; j < arr.length; j++){
+                for(int k =i; k<=j; k++){
+                    System.out.print(arr[k]+" ");
+                }
+                System.out.println();
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,24 @@
+// The below code is used to remove the even number in the arraylist
+And we are iterting from end to reduce the time complexity by shifting
+
+import java.util.ArrayList;
+
+public class even {
+    public static void main(String args[]){
+        ArrayList<Integer> arr = new ArrayList<>();
+        arr.add(1);
+        arr.add(4);
+        arr.add(7);
+        arr.add(2);
+        arr.add(8);
+        arr.add(9);
+        for(int i =arr.size()-1 ; i>=0; i--){
+            if(arr.get(i)%2 ==0){
+                arr.remove(i);
+            }
+        }
+        System.out.println(arr);
+
+    }
+    
+}

@@ -1,0 +1,35 @@
+// The below code is to transpose a matrix
+
+import java.util.Scanner;
+
+public class tranpose {
+     public static void main(String args[]){
+        System.out.println("Enter the no of rows and colums of the array ");
+        Scanner s = new Scanner(System.in);
+        int m = s.nextInt();
+        int n = s.nextInt();
+        int arr[][] = new int[m][n];
+        System.out.println("Enter the elements");
+        for(int i=0; i<m ;i++){
+            for(int j=0; j<n; j++){
+                arr[i][j] = s.nextInt();
+            }
+        }
+        for(int i =0; i<m; i++){
+            for (int j =0; j<i; j++){
+                int temp = arr[i][j];
+                arr[i][j] = arr[j][i];
+                arr[j][i] = temp;
+            }
+        }
+        System.out.println("The Transpose matrix is ");
+        for(int i=0; i<m ; i++){
+            for(int j=0; j<n; j++)
+            {
+                System.out.print(arr[i][j]);
+            }
+            System.out.println("");
+        }
+     }  
+    
+}
