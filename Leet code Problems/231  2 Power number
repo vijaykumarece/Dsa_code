@@ -1,0 +1,16 @@
+// The problem is to find the number it is a 2 power product number are not
+// The concept here we use is bit wise calculation to determine where the number is power of two or not
+// eg
+// 1) If the number is 1 we have calculate the bit and between n & n-1
+//1= 0001 & 0000 = 0000
+//2= 0010 & 0001 = 0000
+//4 = 0100 & 0011 = 0000
+//8 = 1000 & 0111 = 0000
+//16 = 0001 0000 & 0000 1111 = 0000
+//here how it is work if we calculate and operation with a n and with n-1 it gives a zero when it is a power of 2
+
+class Solution {
+    public boolean isPowerOfTwo(int n) {
+        return n>0 && (n & (n-1)) ==0;
+    }
+}
