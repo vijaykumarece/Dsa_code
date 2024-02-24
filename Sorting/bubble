@@ -1,0 +1,31 @@
+The below code is to sort the array in bubble sort
+And the difference between the selection and bubble sort are
+selection sort will sort the lowest elements and
+the bubble sort will sort first the highest element in the end.
+
+
+
+public class bubble {
+    public static void main (String args[]){
+        int arr[] = new int[]{50,2,45,1,4,-1,-45,12,65};
+        bubble_sort(arr);
+        
+
+    }
+    public static void bubble_sort(int a[]){
+        for(int i =0; i<a.length - 1; i++){
+            for(int j =0; j<a.length - 1 - i; j++){
+                if(a[j] > a[j+1]){
+                    int temp = a[j];
+                    a[j] = a[j+1];
+                    a[j+1] = temp;
+
+                }
+            }
+        }
+        for(int l : a){
+            System.out.println(l);
+        }
+    }
+    
+}
