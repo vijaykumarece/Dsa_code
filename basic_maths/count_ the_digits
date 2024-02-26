@@ -1,0 +1,13 @@
+In the below code it will first divide the number with 10 that makes reducing a single digit and then we have to count it
+
+public class Solution {
+    public static int countDigits(int n){
+        // Write your code here.
+       int counter =0;
+        while(n>0){
+            counter++;
+            n = n /10;
+        }
+        return counter;
+    }
+}
