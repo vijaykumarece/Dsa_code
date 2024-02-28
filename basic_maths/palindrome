@@ -1,0 +1,29 @@
+The below is to check the palindrome
+In that first we have to convert the number into a reverse number and compare the both
+If it same means it is palindrome.
+input = 11
+output = It is palindrome
+
+public class palindrome {
+    public static void main(String args[]){
+        int n = 121;
+        check_panlindrome(n);
+    }
+    public static void check_panlindrome(int number){
+        int last;
+        int re =0;
+        int orginal = number;
+        System.out.println(orginal);
+        while(number >0){
+            last = number % 10;
+            re = re * 10 + last;
+            number = number / 10;
+
+        }
+        if(orginal == re ){
+            System.out.println("It is palindrome");
+        }
+        else System.out.println("It's not");
+    }    
+
+}
