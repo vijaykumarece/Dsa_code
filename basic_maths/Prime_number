@@ -1,0 +1,22 @@
+public class prime {
+    public static void main(String[] args) {
+        int n =17;
+        primefa(n);
+
+    }
+    public static void primefa (int num){
+        int cnt =0;
+        for(int i =1; i*i <=num ; i++){
+            if(num % i == 0){
+                cnt++;
+                if(num/i !=i){
+                    cnt++;
+                }
+            }
+        }
+        if(cnt==2)  System.out.println("It's a prime number");
+        else System.out.println("It's not a prime number");
+        
+    }
+    
+}
