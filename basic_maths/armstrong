@@ -1,0 +1,22 @@
+The below code is to check if the number is a armstrong number.
+
+
+
+public class armstrong {
+    public static void main(String args[]){
+        int  number = 153;
+        check_am(number);
+    }
+    public static void check_am(int n){
+        int sum =0;
+        int original = n;
+        while(n>0){
+            int last = n % 10;
+            sum += (last*last*last);
+            n = n / 10;
+        }
+        if(original ==sum) System.out.println("Its armstrong"); 
+        else System.out.println("Its not a amstrong");
+    }
+    
+}
